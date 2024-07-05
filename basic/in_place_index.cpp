@@ -13,7 +13,7 @@ int main()
 	std::variant<
 		set<int>,
 		set<int, decltype(pred)>> vx{
-		std::in_place_index<1>,
+		in_place_index<1>,
 		{4, 8, -7, -2, 0, 5},
 		pred };
 
