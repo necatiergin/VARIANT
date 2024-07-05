@@ -16,7 +16,7 @@ int main()
 		string str = get<1>(var);
 		cout << "str = " << str << '\n';
 	}
-	catch (const std::bad_variant_access& e) {
+	catch (const bad_variant_access& e) {
 		cerr << "exception caught  " << e.what() << '\n';
 	}
 }
