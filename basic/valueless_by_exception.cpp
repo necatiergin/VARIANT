@@ -18,10 +18,10 @@ int main()
 	try {
 		var.emplace<1>(S{});
 	}
-	catch (const std::exception& ex) {
-		cout << "hata yakalandi ... " << ex.what() << "\n";
-		cout << boolalpha << var.valueless_by_exception() << "\n";
-		cout << "var.index() = " << var.index() << "\n";
-		std::cout << (var.index() == variant_npos) << "\n";
+	catch (const exception& ex) {
+		cout << "hata yakalandi ... " << ex.what() << '\n';
+		cout << boolalpha << var.valueless_by_exception() << '\n';
+		cout << "var.index() = " << var.index() << '\n';
+		cout << (var.index() == variant_npos) << '\n';
 	}
 }
