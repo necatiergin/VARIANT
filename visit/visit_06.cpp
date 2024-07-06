@@ -7,7 +7,7 @@ class Visitor {
 public:
 	void operator()(const std::string& s, std::bitset<32>bts)
 	{
-		std::cout << "string : " << s << "\nbitset = " << bts << "\n";
+		std::cout << "string : " << s << "\nbitset = " << bts << '\n';
 	}
 
 	void operator()(int i, char c)
@@ -31,8 +31,8 @@ public:
 int main()
 {
 	using namespace std;
-	
-	variant<int, double, string> vx{12};
+
+	variant<int, double, string> vx{ 12 };
 	variant<char, long, bitset<32>> vy{ 'A' };
 
 	visit(Visitor{}, vx, vy);
