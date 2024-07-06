@@ -4,7 +4,6 @@
 
 class Derived : public std::variant<int, std::string> {};
 
-
 int main()
 {
 	using namespace std;
