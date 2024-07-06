@@ -33,6 +33,6 @@ int main()
 	}
 	catch (const bad_variant_access& e)
 	{
-		std::cout << "exception caught : " << e.what() << '\n';
+		cout << "exception caught : " << e.what() << '\n';
 	}
 }
