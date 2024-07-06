@@ -16,5 +16,5 @@ int main()
 	variant<string, string> v2;
 	v2.emplace<1>("ghi"); // OK
 	cout << get<1>(v2) << '\n';
-	//v2.emplace<string>("abc"); //gecersiz
+	//v2.emplace<string>("abc"); //invalid
 }
