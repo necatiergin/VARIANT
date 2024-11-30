@@ -12,19 +12,19 @@ private:
 
 int main()
 {
-	using namespace std;
+	using std::variant, std::monostate, std::cout;
 
 	//variant<Data, int, double> v1;  //error: class Data has no default ctor.
 	variant<monostate, Data, int, double> v2; //valid
 
 	cout << "index = " << v2.index() << '\n';  // 0
 
-	if (holds_alternative<std::monostate>(v2))
+	if (holds_alternative<monostate>(v2))
 		cout << "empty (monostate)\n";
 	else
 		cout << "not empty\n";
 
-	if (get_if<std::monostate>(&v2))
+	if (get_if<monostate>(&v2))
 		cout << "empty (monostate)\n";
 	else
 		std::cout << "not empty\n";
