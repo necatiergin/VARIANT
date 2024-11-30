@@ -43,7 +43,7 @@ int main()
 		}
 		else if (auto pName = std::get_if<idx_name>(&person))
 		{
-			std::cout << "Benim adim " << *pName << '\n';
+			std::cout << "my name is " << *pName << '\n';
 		}
 	}
 	catch (std::bad_variant_access& e)
