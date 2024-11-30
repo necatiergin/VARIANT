@@ -4,7 +4,7 @@
 
 int main()
 {
-	using namespace std;
+	using std::variant, std::string, std::monostate, std::cout;
 
 	variant<monostate, string, int, double> vx;
 
