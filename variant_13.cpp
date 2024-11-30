@@ -4,12 +4,12 @@
 
 int main()
 {
-	using namespace std;
+	using std::variant, std::string, std::cout;
 
 	variant<string, int> v1;
 
 	v1.emplace<0>("necati"); // OK
-	cout << get<0>(v1) << '\n';
+	std::cout << get<0>(v1) << '\n';
 	v1.emplace<string>("velican"); // OK
 	cout << get<0>(v1) << '\n';
 
