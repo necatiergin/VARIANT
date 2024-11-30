@@ -2,7 +2,6 @@
 #include <stdexcept>
 #include <iostream>
 
-
 struct S {
 	operator int() {
 		throw std::runtime_error{ "hata" };
@@ -12,16 +11,16 @@ struct S {
 
 int main()
 {
-	using namespace std;
+	using std::cout, std::boolalpha;
 
-	variant<double, int> var{ 12.2 }; 
+	std::variant<double, int> var{ 12.2 };
 	try {
 		var.emplace<1>(S{});
 	}
-	catch (const exception& ex) {
+	catch (const std::exception& ex) {
 		cout << "hata yakalandi ... " << ex.what() << '\n';
 		cout << boolalpha << var.valueless_by_exception() << '\n';
 		cout << "var.index() = " << var.index() << '\n';
-		cout << (var.index() == variant_npos) << '\n';
+		cout << (var.index() == std::variant_npos) << '\n';
 	}
 }
