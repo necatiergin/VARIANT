@@ -4,7 +4,7 @@
 
 int main()
 {
-	using namespace std;
+	using std::variant, std::string, std::cout;
 
 	variant<int, string> v1{ "necati ergin" };
 	cout << "v1.index() = " << v1.index() << '\n';
