@@ -12,7 +12,7 @@ int main()
 		using weight_t = double;
 		using name_t = string;
 
-		std::variant<age_t, weight_t, name_t> va;
+		variant<age_t, weight_t, name_t> va;
 
 		enum : size_t { idx_age, idx_weight, idx_name };
 
