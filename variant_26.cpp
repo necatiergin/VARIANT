@@ -4,14 +4,14 @@
 
 int main()
 {
-	using namespace std;
+	using std::cout;
 
-	variant<int, string, double> vx{ "mustafa" };
+	std::variant<int, std::string, double> vx{ "mustafa" };
 
 	cout << get<1>(vx) << '\n';
 	auto f = [](auto& val) {
 		val = std::remove_reference_t<decltype(val)>{};
-	};
+		};
 
 	visit(f, vx);
 	cout << get<1>(vx).size() << '\n';
