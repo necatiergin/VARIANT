@@ -4,15 +4,15 @@
 
 int main()
 {
-	using namespace std;
+	using std::cout;
 
 	try
 	{
 		using age_t = int;
 		using weight_t = double;
-		using name_t = string;
+		using name_t = std::string;
 
-		variant<age_t, weight_t, name_t> va;
+		std::variant<age_t, weight_t, name_t> va;
 
 		enum : size_t { idx_age, idx_weight, idx_name };
 
@@ -31,7 +31,7 @@ int main()
 		cout << "name    = " << get<idx_name>(va) << '\n';
 		cout << "name    = " << get<name_t>(va) << '\n';
 	}
-	catch (const bad_variant_access& e)
+	catch (const std::bad_variant_access& e)
 	{
 		cout << "exception caught : " << e.what() << '\n';
 	}
