@@ -8,7 +8,7 @@ public:
 		std::cout << "A()\n";
 	}
 
-	A(const A& other) : mx{other.mx}
+	A(const A& other) : mx{ other.mx }
 	{
 		std::cout << "A copy ctor\n";
 	}
@@ -68,10 +68,10 @@ B bx(10);
 
 int main()
 {
-	using namespace std;
+	using std::cout, std::variant, std::holds_alternative;
 
 	cout << "main started running\n";
-	cout.setf(ios::boolalpha);
+	cout.setf(std::ios::boolalpha);
 	variant<A, B> var_ab(ax);
 
 	cout << "get<0>(var_ab) = " << get<0>(var_ab) << '\n';
