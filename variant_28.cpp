@@ -30,10 +30,8 @@ public:
 
 int main()
 {
-	using namespace std;
+	std::variant<int, double, std::string> vx{ 12 };
+	std::variant<char, long, std::bitset<32>> vy{ 'A' };
 
-	variant<int, double, string> vx{ 12 };
-	variant<char, long, bitset<32>> vy{ 'A' };
-
-	visit(Visitor{}, vx, vy);
+	std::visit(Visitor{}, vx, vy);
 }
