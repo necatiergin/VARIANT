@@ -15,8 +15,6 @@ private:
 	std::string m_name;
 };
 
-////////////////////////////////////////////////////////////////////////////////
-
 class Dog {
 public:
 	Dog(const std::string name) : m_name{ std::move(name) } {}
@@ -28,8 +26,6 @@ private:
 	std::string m_name;
 };
 
-////////////////////////////////////////////////////////////////////////////////
-
 class Lamb {
 public:
 	Lamb(const std::string name) : m_name{ std::move(name) } {}
@@ -40,8 +36,6 @@ public:
 private:
 	std::string m_name;
 };
-
-////////////////////////////////////////////////////////////////////////////////
 
 using Animal = std::variant<Dog, Cat, Lamb>;
 
